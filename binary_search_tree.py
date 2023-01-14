@@ -47,6 +47,12 @@ class BinarySearchTreeNode:
                 self.left.search(val)
             else:
                 return False #means the value does not exist in the elements
+        if val > self.data:
+            #value should be in right subtree
+            if self.right:
+                return self.right.search(val)
+            else:
+                return False #means the value does not exist in the elements
         
 def build_tree(elements):
     print("Building tree with these elements:",elements)
