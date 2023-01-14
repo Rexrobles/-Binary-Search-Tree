@@ -60,4 +60,7 @@ def build_tree(elements):
     return root
 
 if __name__ == '__main__':
-    my_name = (["R", "E", "X", "-", "I", "M", "M", "A", "N", "H" "R", "O","B", "L", "E", "S"])
+    my_name = (["R", "E", "X", "-", "I", "M", "M", "A", "N", "H", "R", "O","B", "L", "E", "S"])
+    my_name_tree = build_tree(my_name)
+    
+    print(my_name_tree.in_order_traversal())
