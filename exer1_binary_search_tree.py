@@ -83,3 +83,4 @@ if __name__ == '__main__':
     numbers_tree = build_tree(numbers)
     print("Min:",numbers_tree.find_min())
     print("Max:",numbers_tree.find_max())
+    print("Sum:",numbers_tree.calculate_sum())
