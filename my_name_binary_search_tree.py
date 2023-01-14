@@ -50,5 +50,14 @@ class BinarySearchTreeNode:
             elements += self.right.pre_order_traversal()
         return elements
     
+def build_tree(elements):
+    print("Building tree with these elements:",elements)
+    root = BinarySearchTreeNode(elements[0])
+
+    for i in range(1,len(elements)):
+        root.add_child(elements[i])
+
+    return root
+
 if __name__ == '__main__':
     my_name = (["R", "E", "X", "-", "I", "M", "M", "A", "N", "H" "R", "O","B", "L", "E", "S"])
