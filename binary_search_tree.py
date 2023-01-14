@@ -44,7 +44,7 @@ class BinarySearchTreeNode:
         if val < self.data:
             #value should be in left subtree
             if self.left:
-                self.left.search(val)
+                return self.left.search(val)
             else:
                 return False #means the value does not exist in the elements
         if val > self.data:
@@ -71,3 +71,8 @@ if __name__ == '__main__':
  #Binary search that contained string
     countries = ["India", "Pakistan", "Germany", "USA", "China", "UK", "USA"]
     country_tree = build_tree(countries)
+    
+    print ("UK is in the list?", country_tree.search("UK"))
+    print ("Sweden is in the list", country_tree.search("Sweden"))
+
+    print (country_tree.in_order_traversal())
