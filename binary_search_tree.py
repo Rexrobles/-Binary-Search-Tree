@@ -36,6 +36,17 @@ class BinarySearchTreeNode:
             elements += self.right.in_order_traversal()
             
         return elements
+
+    def search (self, val):
+        if self.data == val:
+            return True
+        
+        if val < self.data:
+            #value should be in left subtree
+            if self.left:
+                self.left.search(val)
+            else:
+                return False #means the value does not exist in the elements
         
 def build_tree(elements):
     print("Building tree with these elements:",elements)
