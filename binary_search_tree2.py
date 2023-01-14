@@ -28,16 +28,28 @@ class BinarySearchTreeNode:
             return True
 
         if val < self.data:
-            #value might be in left subtree
+            #value should be in left subtree
             if self.left:
                 return self.left.search(val)
             else:
-                return False #It means the value does not exist in the elements
+                return False #means the value does not exist in the elements
 
         if val > self.data:
-            #value might be in right subtree
+            #value should be in right subtree
             if self.right:
                 return self.right.search(val)
             else:
-                return False #It means the value does not exist in the elements
+                return False #means the value does not exist in the elements
+        
+    def in_order_traversal(self):
+        elements = []
+        if self.left:
+            elements += self.left.in_order_traversal()
+
+        elements.append(self.data)
+
+        if self.right:
+            elements += self.right.in_order_traversal()
+
+        return elements
                 
