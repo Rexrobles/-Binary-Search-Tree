@@ -123,3 +123,8 @@ if __name__ == '__main__':
     print("\nIs there letter C?",my_name_tree.search("C")) 
     print("\nMinimum:",my_name_tree.find_min())
     print("\nMaximum:",my_name_tree.find_max())
+    
+    my_name = (["R", "E", "X", "-", "I", "M", "M", "A", "N", "H", "R", "O","B", "L", "E", "S"])
+    my_name_tree = build_tree(my_name)
+    my_name_tree.delete("O")
+    print("\nAfter deleting O:", my_name_tree.in_order_traversal())
