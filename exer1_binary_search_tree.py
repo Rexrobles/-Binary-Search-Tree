@@ -53,6 +53,11 @@ class BinarySearchTreeNode:
                 return self.right.search(val)
             else:
                 return False #means the value does not exist in the elements
+            
+    def find_min(self):
+        if self.left is None:
+            return self.data
+        return self.left.find_min()
         
 def build_tree(elements):
     print("Building tree with these elements:",elements)
