@@ -70,3 +70,5 @@ def build_tree(elements):
         
 if __name__ == '__main__':
     numbers = [17, 4, 1, 20, 9, 23, 18, 34]
+    numbers_tree = build_tree(numbers)
+    print("Min:",numbers_tree.find_min())
