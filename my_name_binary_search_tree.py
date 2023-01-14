@@ -95,3 +95,5 @@ if __name__ == '__main__':
     print("\nPre order traversal:",my_name_tree.pre_order_traversal())
     print("\nIs there letter E?",my_name_tree.search("E")) 
     print("\nIs there letter C?",my_name_tree.search("C")) 
+    print("\nMinimum:",my_name_tree.find_min())
+    print("\nMaximum:",my_name_tree.find_max())
